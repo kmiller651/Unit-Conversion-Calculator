@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>Conversion Bash</TITLE>
+<META charset="UTF-8" />
+<META name="author" description="Kenneth Miller" />
+<SCRIPT type="text/javascript">
+function onClick_button() {
+	var textBox1 = document.getElementById("myTextBox");
+	var textBox2 = document.getElementById("mySecondText");
+	var answerDiv = document.getElementById("theAnswer");
+	var myAnswer = (Number(textBox1.value) * Number(textBox2.value));
+	// I used an extra variable to make the code easier to read.
+	answerDiv.innerHTML = "The answer is " + myAnswer;
+} // end function
+</SCRIPT>
+</HEAD>
+<BODY style="background-color:purple;">
+<!--
+<I>September 6, 2019</I><BR />
+Here is a simple paragraph.<BR />
+I worked all summer.<BR />
+-->
+Type two numbers, and click the button to add them together.
+<INPUT type="text" id="myTextBox" />
+<INPUT type="text" id="mySecondText" />
+<BUTTON onClick="onClick_button();">Click here!</BUTTON><BR />
+<DIV id="theAnswer"> </DIV>
+
+</BODY>
+</HTML>

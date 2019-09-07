@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>Conversion Bash</TITLE>
+<META charset="UTF-8" />
+<META name="author" description="Kenneth Miller" />
+<SCRIPT type="text/javascript">
+function inToMM() {
+	var textBox1 = document.getElementById("myTextBox");
+	var answerDiv1 = document.getElementById("theAnswer1");
+	var myMManswer = (Number(textBox1.value) * 25.4);
+	// I used an extra variable to make the code easier to read.
+	answerDiv1.innerHTML = "You Have " + myMManswer + " mm";
+} // end functionMM
+function m3ToGAL() {
+	var textBox2 = document.getElementById("mySecondText");
+	var answerDiv2 = document.getElementById("theAnswer2");
+	var myGALanswer = (Number(textBox2.value) * 264.2);
+	answerDiv2.innerHTML = "You Have " + myGALanswer + " gals";
+} // end functionGAL
+function lbfToN() {
+	var textBox3 = document.getElementById("myThirdText");
+	var answerDiv3 = document.getElementById("theAnswer3");
+	var myLBFanswer = (Number(textBox3.value) * 4.448);
+	answerDiv3.innerHTML = "You Have " + myLBFanswer + " newtons";
+} // end functionN
+function milesToKM() {
+	var textBox4 = document.getElementById("myFourthText");
+	var answerDiv4 = document.getElementById("theAnswer4");
+	var myMILESanswer = (Number(textBox4.value) * 1.6);
+	answerDiv4.innerHTML = "The answer is " + myMILESanswer + " miles";
+} // end functionKM
+</SCRIPT>
+</HEAD>
+<BODY style="background-color:mediumseagreen;">
+
+<!-- Begin MM conversion -->
+<h1 style="border:2px solid dodgerblue;">Conversion <span>Bash</span></h1>
+Convert Inches to Millimetres.
+<INPUT type="text" id="myTextBox" />
+<!--
+<I>September 6, 2019</I><BR />
+I'm adding the ending conversion to the click button to segregate the buttons.<BR />
+-->
+<BUTTON onClick="inToMM();">Show me the MM!</BUTTON><BR /> <DIV id="theAnswer1"> </DIV>
+<!-- End MM conversion -->
+
+
+<!-- Begin Gallon Conversion -->
+Convert m<sup>3</sup> to gallons!
+<INPUT type="text" id="mySecondText" />
+<BUTTON onClick="m3ToGAL();">Show me the Gallons!</BUTTON><BR /> <DIV id="theAnswer2"> </DIV>
+<!-- End Gallon conversion -->
+
+
+<!-- Begin LBF Conversion -->
+Convert LBF to newtons!
+<INPUT type="text" id="myThirdText" />
+<BUTTON onClick="lbfToN();">Show me the newtons!</BUTTON><BR /> <DIV id="theAnswer3"> </DIV>
+<!-- End LBF conversion -->
+
+<!-- Begin Miles Conversion -->
+Convert miles to kilometers!
+<INPUT type="text" id="myFourthText" />
+<BUTTON onClick="milesToKM();">Show me the kilometers!</BUTTON><BR /> <DIV id="theAnswer4"> </DIV>
+<!-- End miles conversion -->
+
+</BODY>
+</HTML>
