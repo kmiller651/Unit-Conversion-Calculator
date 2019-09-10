@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>Conversion Bash</TITLE>
+<META charset="UTF-8" />
+<!-- Added width adjustment for different devices -->
+<META name="author" description="Kenneth Miller" content="width=device-width, initial-scale=1" />
+
+
+<!-- Added separate functions for each conversion so that all answers did not show up at once -->
+<SCRIPT type="text/javascript">
+function inToMM() {
+	var textBox1 = document.getElementById("myTextBox");
+	var answerDiv1 = document.getElementById("theAnswer1");
+	var myMManswer = (Number(textBox1.value) * 25.4);
+	// I used an extra variable to make the code easier to read.
+	answerDiv1.innerHTML = "You Have " + myMManswer + " mm";
+} // end functionMM
+function m3ToGAL() {
+	var textBox2 = document.getElementById("mySecondText");
+	var answerDiv2 = document.getElementById("theAnswer2");
+	var myGALanswer = (Number(textBox2.value) * 264.2);
+	answerDiv2.innerHTML = "You Have " + myGALanswer + " gals";
+} // end functionGAL
+function lbfToN() {
+	var textBox3 = document.getElementById("myThirdText");
+	var answerDiv3 = document.getElementById("theAnswer3");
+	var myLBFanswer = (Number(textBox3.value) * 4.448);
+	answerDiv3.innerHTML = "You Have " + myLBFanswer + " newtons";
+} // end functionN
+function milesToKM() {
+	var textBox4 = document.getElementById("myFourthText");
+	var answerDiv4 = document.getElementById("theAnswer4");
+	var myMILESanswer = (Number(textBox4.value) * 1.6);
+	answerDiv4.innerHTML = "You Have " + myMILESanswer + " miles";
+} // end functionKM
+</SCRIPT>
+</HEAD>
+
+<BODY style="text-align: center;">
+
+<!-- Added in coloring and text alignment -->
+<h1 style="background-color: blue;border:2px solid tomato; padding: 15px; float: top;text-align: center;">Conversion Bash</h1>
+
+<!-- Separating the title from the content -->
+<section style="text-align: center; float: top; border: 2px solid gray; padding: 30px;">
+<!-- Begin MM conversion -->
+Convert inches to millimetres.
+<INPUT type="text" id="myTextBox" />
+<BUTTON onClick="inToMM();">Show me the MM!</BUTTON> <span id="theAnswer1"> </span>
+<!-- Spans made the answer appear next to the button instead of below the line -->
+<!-- End MM conversion -->
+
+
+<!-- Begin Gallon Conversion -->
+<BR />
+Convert m<sup>3</sup> to gallons.
+<INPUT type="text" id="mySecondText" />
+<BUTTON onClick="m3ToGAL();">Show me the Gallons!</BUTTON> <span id="theAnswer2"> </span>
+<!-- End Gallon conversion -->
+
+
+<!-- Begin LBF Conversion -->
+<br />
+Convert LBF to newtons.
+<INPUT type="text" id="myThirdText" />
+<BUTTON onClick="lbfToN();">Show me the Newtons!</BUTTON> <span id="theAnswer3"> </span>
+<!-- End LBF conversion -->
+
+<!-- Begin Miles Conversion -->
+<br />
+Convert miles to kilometers.
+<INPUT type="text" id="myFourthText" />
+<BUTTON onClick="milesToKM();">Show me the Kilometers!</BUTTON> <span id="theAnswer4"> </span>
+<!-- End miles conversion -->
+</section>
+
+<!-- Adding a signature to the work -->
+<br />
+<footer style="text-align: center; border: 1px solid gray; float: top;">
+	<p>By: Kenneth Miller</p>
+</footer>
+
+</body>
+</HTML>
